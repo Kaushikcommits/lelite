@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root{
+    --gold: #b9a140;
+    --goldnav: #eda625;
+
+    
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: none;
+    font-family: poppins;
+}
+
+navbar{
+    position: sticky;
+    display: flex; 
+    height: 10vh;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background: black;
+    font-family: poppins;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #eda625;
+}
+
+.nav-links{
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+    list-style: none;
+}
+
+.nav-links a:hover{
+    color: var(--goldnav);
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.logo{
+    margin-left: 40px;
+}
+
+/* RESPONSIVENESS */
+
+@media screen and (max-width: 950px) {
+
+    .line{
+        height: 3px;
+        width: 30px;
+        background: var(--goldnav);
+        margin: 3px;
+    }   
+    
+    .hamburger{
+        display: flex;
+        flex-direction: column;
+        margin-right: 40px;
+        cursor: pointer;
+    }
+
+    .nav-links{
+        position: fixed;
+        background: beige;
+        height: 100vh;
+        width: 100%;
+        clip-path: circle(100px at 90% -10%);
+        -webkit-clip-path: circle(100px at 90% -10%);
+        transition: all .40s ease-in-out;
+        opacity: 80%;
+    }
+    h1{
+        text-align: center;
+    }
+}
+
+/* CONTENT */
+
+.page1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 50vh;
+    font-family: poppins;
+    background: black;
+    /*border: rgb(0, 4, 255) 3px solid;*/
+}
+h1{
+    display: flex;
+    justify-content: center;
+    font-size: 5rem;
+    padding-top: 50px;    
+    background: radial-gradient(circle, #eda625 0%, #aa6200 54%, rgba(237,166,37,1) 96%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+   /* border: violet 3px solid;*/
+}
+.text1{
+    padding-bottom: 80px;
+    display: flex;
+    justify-content: center;
+    background: radial-gradient(circle, rgba(237,166,37,1) 0%, rgba(170,98,0,1) 54%, rgba(237,166,37,1) 96%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /*border: violet 3px solid;*/
+}
+
+.dental-ripple{
+    display: flex;
+    justify-content: center;
+    height: 40vh;
+}
+.dental-design{
+    display: flex;
+    justify-content: start;
+    
+}
+.half-circle{
+    
+    width: 400px;
+  height: 200px;
+  border: 5px solid rgb(1, 1, 1);
+        border-top-left-radius: 100% 200%;
+        border-top-right-radius: 100% 200%;
+        border-bottom:  transparent;
+    transform: rotate(180deg) ;
+    background-color: black;
+    color: var(--gold);
+}
+
+/* PAGE 2 SERVICES */
+
+.page2{
+    height: 100vh;
+    background-color: #decdb4;
+    display: flex;
+    justify-content: center;
+}
+
+/* PAGE 3 GALLERY */
+
+.gallery{
+    height: 140vh;
+    background-color: ivory;
+    display: flex;
+    justify-content: center;    
+}
+
+/* PAGE 4 CONTACT */
+
+.contact{
+    height: 60vh;
+    background-color: #dde0cf;
+    display: flex;
+    justify-content: center;    
+}
