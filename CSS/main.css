@@ -18,24 +18,38 @@
     box-sizing: none;
     font-family: poppins;
 }
-a{
-    text-decoration: none;
-    color: white;
-}
-a:hover{
-    color: var(--goldnav);
-}
-
-li{
-    list-style: none;
-}
 
 /* base styles */
 
 nav {
     background-color: black;
     color: var(--goldnav);
+    text-transform: uppercase;
     
+}
+
+.nav-links li a{
+    text-decoration: none;
+    color: white;
+   
+   
+}
+.nav-links li{
+    list-style: none;   
+}
+
+.nav-links li{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.nav-links li:hover{
+    background-color: var(--goldnav);
+    color: black!important;
 }
 
 .home{
@@ -50,11 +64,12 @@ h1{
     -webkit-text-fill-color: transparent;
 }
 
-.services{
-    height: 100vh;    
+.container{
+    display: flex;   
+    margin: 20px;
 }
 .gallery{
-    height: 140vh;
+    
     background-color: ivory ;
 }
 .contact{
@@ -85,11 +100,8 @@ nav{
     
 }
 
-.nav-links{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
+.nav-links {
+    display:none;
 }
 
 .home{
@@ -122,14 +134,42 @@ h1{
     text-align: center;
 }
 
+.line{
+    height: 3px;
+    width: 30px;
+    background: var(--goldnav);
+    margin: 3px;    
+}   
+
+.hamburger{
+    display: flex;
+    flex-direction: column;
+    margin-right: 40px;
+    cursor: pointer;
+    justify-content: center;
+}
+
 .container{
     padding-top: 90px;
+    flex-direction: column;
     
 }
 
+.box{
+    width: 300px;
+    margin: 10px;
+    border: 3px black solid;
+}
 
-
-
+.container-box{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+   
+}
 
 
 
@@ -142,6 +182,20 @@ h1{
 /* large tablet & laptop styles : 960px */
 
 @media screen and (min-width : 960px){
+
+    .hamburger{
+        display: none;
+    }
+    .nav-links {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .container{
+        border: blue 2px solid;
+    }
 
 }
 
