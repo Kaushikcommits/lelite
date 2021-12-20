@@ -30,26 +30,16 @@ nav {
 
 .nav-links li a{
     text-decoration: none;
-    color: white;
-   
-   
+    color: white; 
 }
 .nav-links li{
     list-style: none;   
 }
 
-.nav-links li{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-}
 
 .nav-links li:hover{
     background-color: var(--goldnav);
-    color: black!important;
+    
 }
 
 .home{
@@ -100,8 +90,44 @@ nav{
     
 }
 
-.nav-links {
-    display:none;
+.line{
+    height: 3px;
+    width: 30px;
+    background: var(--goldnav);
+    margin: 3px;    
+}   
+
+.hamburger{
+    display: flex;
+    flex-direction: column;
+    margin-right: 40px;
+    cursor: pointer;
+    justify-content: center;
+    z-index: 99;
+}
+
+.nav-links{
+    position:fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    inset: 0 0 0 150px;
+    background: black;
+    display: none;
+}
+
+.nav-links ul{
+    margin-bottom: 300px;
+}
+.nav-links ul li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    margin-top: 40px;
+    font-weight: bold;
+    font-size: 1.1rem;
 }
 
 .home{
@@ -134,31 +160,23 @@ h1{
     text-align: center;
 }
 
-.line{
-    height: 3px;
-    width: 30px;
-    background: var(--goldnav);
-    margin: 3px;    
-}   
-
-.hamburger{
-    display: flex;
-    flex-direction: column;
-    margin-right: 40px;
-    cursor: pointer;
-    justify-content: center;
-}
-
 .container{
-    padding-top: 90px;
+    padding-top: 20px;
     flex-direction: column;
     
 }
 
 .box{
-    width: 300px;
+    height: 300px;
+    display: flex;
     margin: 10px;
     border: 3px black solid;
+    justify-content: center;
+    align-items: center;
+    flex-flow: wrap;
+    flex: 1 1 300px;
+    text-align: center;
+    
 }
 
 .container-box{
@@ -186,12 +204,21 @@ h1{
     .hamburger{
         display: none;
     }
+
+    .nav-links ul li{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+    }
     .nav-links {
         display: flex;
         justify-content: space-around;
         align-items: center;
         width: 100%;
     }
+   
     
     .container{
         border: blue 2px solid;
